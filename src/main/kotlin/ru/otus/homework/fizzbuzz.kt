@@ -19,15 +19,12 @@ fun fizzbuzz(n: Int): Array<String> {
             array[i] = "Fizz"
             } else if (i % 5 == 0){
             array[i] = "Buzz"
-            } else if ((i % 3 == 0) && (i % 5 == 0)){
-            array[i] = "FizzBuzz"
-            } else {
+           } else {
             array[i] = i.toString()
         }
 
         println(array[i])
     }
-
 
     return array
 }

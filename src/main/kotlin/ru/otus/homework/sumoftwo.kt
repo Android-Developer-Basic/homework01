@@ -22,6 +22,7 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
             if (target == (numbers[i] + numbers[j])){
                 result[0] = i
                 result[1] = j
+                break
             }
         }
     }
