@@ -4,7 +4,7 @@ package ru.otus.homework
 
 fun main(){
 
-    val target = 9
+    val target = 4
     val numbers: IntArray = intArrayOf(1, 5, 7, 8 , 3, 4)
 
     val mass = sumOfTwo(numbers, target)
@@ -17,12 +17,14 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
 
     val result = IntArray(2)
 
-    for (i in numbers.indices){
+   loop@ for (i in numbers.indices){
         for (j in numbers.indices){
-            if (target == (numbers[i] + numbers[j])){
-                result[0] = i
-                result[1] = j
-                break
+            if (i != j) {
+                if (target == (numbers[i] + numbers[j])) {
+                    result[0] = i
+                    result[1] = j
+                    break@loop
+                }
             }
         }
     }
