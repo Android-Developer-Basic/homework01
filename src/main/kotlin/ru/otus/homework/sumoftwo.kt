@@ -2,8 +2,6 @@ package ru.otus.homework
 
 
 fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
-    val arrIndexes = IntArray(2)
-    var sum: Int
 
     if (numbers.size < 2) throw IllegalArgumentException()
 
@@ -12,17 +10,12 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
             if (k == i) {
                 continue
             } else {
-                sum = numbers[k] + numbers[i]
-
-                if (sum == target) {
-                    arrIndexes[0] = i
-                    arrIndexes[1] = k
+                if (numbers[k] + numbers[i] == target) {
+                    return intArrayOf(k, i)
                 }
             }
         }
     }
 
-    if (arrIndexes[0] == 0 && arrIndexes[1] == 0) throw IllegalArgumentException()
-
-    return arrIndexes
+    throw IllegalArgumentException()
 }
