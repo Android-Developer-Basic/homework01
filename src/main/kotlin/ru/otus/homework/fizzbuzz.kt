@@ -6,21 +6,23 @@ fun fizzbuzz(n: Int): Array<String> {
     val intArray = IntArray(n)
     (0 until n).forEach { i -> intArray[i] = i }
 
-    val stringArray = Array(size = n) {""}
-
-    intArray.forEach { i ->
+    val stringArray = Array(size = n) { i ->
         when {
-            i == 0 || (i % 3 == 0 && i % 5 == 0)  -> {
-                stringArray[i] = "FizzBuzz"
+            intArray[i] == 0 ||
+                    (intArray[i] % 3 == 0 && intArray[i] % 5 == 0) -> {
+                "FizzBuzz"
             }
-            i % 3 == 0 -> {
-                stringArray[i] = "Fizz"
+
+            intArray[i] % 3 == 0 -> {
+                "Fizz"
             }
-            i % 5 == 0 -> {
-                stringArray[i] = "Buzz"
+
+            intArray[i] % 5 == 0 -> {
+                "Buzz"
             }
-            else -> stringArray[i] = i.toString()
+
+            else -> i.toString()
         }
     }
-   return stringArray
+    return stringArray
 }
