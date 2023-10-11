@@ -26,4 +26,11 @@ class SumoftwoTest {
             sumOfTwo(intArrayOf(3, 2), 6)
         }
     }
+
+    @Test
+    fun `testcase 4`() {
+        assertThrows<IllegalArgumentException> {
+            sumOfTwo(intArrayOf(), 6)
+        }
+    }
 }
