@@ -3,13 +3,11 @@ package ru.otus.homework
 
 fun fizzbuzz(n: Int): Array<String> {
     val aInts=IntArray(n) {i->i}
-    /*for (i in 0..(n-1)) {
-        aInts[i]=i
-    }*/
+
     val aOut = Array<String>(n){""}
 
     aInts.forEach() { i ->
-        if ( (i==0)  || ((i % 3 == 0) && (i % 5 == 0 ) )) {
+        if ( (i % 3 == 0) && (i % 5 == 0 ) ) {
             aOut[i] = "FizzBuzz"
         } else if ( (i % 3) == 0) {
             aOut[i] = "Fizz"
