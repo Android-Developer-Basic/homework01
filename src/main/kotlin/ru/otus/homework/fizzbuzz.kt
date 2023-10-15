@@ -9,9 +9,9 @@ fun fizzbuzz(n: Int): Array<String> {
     return resultArray
 }
 
-fun prepareArray(size: Int): Array<Int> = Array(size) { i -> i }
+internal fun prepareArray(size: Int): Array<Int> = Array(size) { i -> i }
 
-fun detectNumber(num: Int): String {
+internal fun detectNumber(num: Int): String {
     if (num == 0 || (num % 3 == 0) && (num % 5 == 0)) {
         return "FizzBuzz"
     }
