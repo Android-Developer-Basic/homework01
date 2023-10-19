@@ -1,5 +1,6 @@
 package ru.otus.homework
 
+import fizzbuzz
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
@@ -9,7 +10,7 @@ class FizzbuzzTest {
     fun `testcase 1`() {
         val expected = emptyArray<String>()
         val actual = fizzbuzz(0)
-        assertArrayEquals(expected,actual)
+        SassertArrayEquals(expected,actual)
     }
 
     @Test
