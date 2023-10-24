@@ -29,9 +29,10 @@ class FizzbuzzTest {
             "11",
             "Fizz",
             "13",
-            "14"
+            "14",
+            "FizzBuzz"
         )
-        val actual = fizzbuzz(15)
+        val actual = fizzbuzz(16)
         assertArrayEquals(expected,actual)
     }
 }
