@@ -11,7 +11,7 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
             val a = numbers[i]
             val b = numbers[j]
             val sum = a + b
-            if ((sum == target) && (a != b)) {
+            if ((sum == target) && (i != j)) {
                 result[0] = i
                 result[1] = j
                 return result

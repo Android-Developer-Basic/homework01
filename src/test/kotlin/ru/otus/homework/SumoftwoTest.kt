@@ -15,8 +15,8 @@ class SumoftwoTest {
 
     @Test
     fun `testcase 2`() {
-        val actual = sumOfTwo(intArrayOf(3, 2, 4), 6)
-        val expected = intArrayOf(1, 2)
+        val actual = sumOfTwo(intArrayOf(3, 3), 6)
+        val expected = intArrayOf(0, 1)
         assertArrayEquals(expected, actual)
     }
 
