@@ -15,15 +15,15 @@ class SumoftwoTest {
 
     @Test
     fun `testcase 2`() {
-        val actual = sumOfTwo(intArrayOf(3, 2, 4), 6)
-        val expected = intArrayOf(1, 2)
+        val actual = sumOfTwo(intArrayOf(3, 3), 6)
+        val expected = intArrayOf(0, 1)
         assertArrayEquals(expected, actual)
     }
 
     @Test
     fun `testcase 3`() {
         assertThrows<IllegalArgumentException> {
-            sumOfTwo(intArrayOf(3, 2), 6)
+            sumOfTwo(intArrayOf(1, 2, 5, 5, 11), 4)
         }
     }
 }
