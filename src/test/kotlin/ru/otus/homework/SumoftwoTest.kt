@@ -26,4 +26,11 @@ class SumoftwoTest {
             sumOfTwo(intArrayOf(3, 2), 6)
         }
     }
+
+    @Test
+    fun `testcase 4, required elements are not in a row`() {
+        val actual = sumOfTwo(intArrayOf(2, 4, 5, 6, 1), 10)
+        val expected = intArrayOf(1, 3)
+        assertArrayEquals(expected, actual)
+    }
 }
