@@ -2,7 +2,6 @@ package ru.otus.homework
 //import Array
 
 fun fizzbuzz(n: Int): Array<String> {
-    //TODO("Выполните задание")
     var myArray = emptyArray<String>()
     if(n > 0) {
         myArray = Array(n) { i -> i.toString() }
