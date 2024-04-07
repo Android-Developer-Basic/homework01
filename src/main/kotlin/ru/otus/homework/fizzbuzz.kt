@@ -12,27 +12,24 @@ package ru.otus.homework
  * приведенное к строке
  */
 fun fizzbuzz(n: Int): Array<String> {
-    val fizzbuzzIntArray = Array(n){ it }
-    var fizzbuzzStringArray = emptyArray<String>()
-
-    for (item : Int in fizzbuzzIntArray){
-        fizzbuzzStringArray = if (item % 3 == 0 && item % 5 == 0)
-            fizzbuzzStringArray.plus("FizzBuzz")
-        else if (item % 3 == 0)
-            fizzbuzzStringArray.plus("Fizz")
-        else if (item % 5 == 0)
-            fizzbuzzStringArray.plus("Buzz")
-        else {
-            fizzbuzzStringArray.plus(item.toString())
+    val result = Array(n) {""}
+    for (index : Int in 0 until  n){
+        if (index % 3 == 0 && index % 5 == 0){
+            result[index] = "FizzBuzz"
         }
+        else if (index % 3 == 0){
+            result[index] = "Fizz"
+        }
+        else if (index % 5 == 0)
+            result[index] = "Buzz"
+        else
+            result[index] = index.toString()
     }
-    //return fizzbuzzStringArray
-    return fizzbuzzStringArray
+    return result
 }
 
-// Тут вызов для отладки и проверки
-//fun main(){
-//    for (i : String in fizzbuzz(10)){
-//        println(i)
-//    }
-//}
+fun main(){
+    for (i : String in fizzbuzz(0)){
+        println(i)
+    }
+}
