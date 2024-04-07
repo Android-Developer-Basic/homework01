@@ -7,37 +7,30 @@ package ru.otus.homework
  * сумма значений чисел находящихся на этих индексах равна числу target.
  */
 fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
-    var resultArray = IntArray(0)
-    for (i : Int in numbers.indices){
-        var a = 0
-        if (a == i)
-            a++
-        try {
-            while (numbers[i] + numbers[a] != target){
-                a++
-                if (a == i)
-                    a++
-            }
-            resultArray = resultArray.plus(i)
-            resultArray = resultArray.plus(a)
-            break
+    val resultArray = IntArray(2)
+    loop1@ for (lIndex : Int in numbers.indices){
+        var rIndex = 0
+        if (rIndex == lIndex)
+            rIndex++
+        while (numbers[lIndex] + numbers[rIndex] != target){
+            rIndex++
+            if (rIndex == lIndex)
+                rIndex++
+            if (rIndex == numbers.size)
+                continue@loop1
         }
-        catch (e: ArrayIndexOutOfBoundsException) {
-            println("Перехват ошибки \"ArrayIndexOutOfBoundsException\"")
-        }
+        resultArray[0] = lIndex
+        resultArray[1] = rIndex
+        break
     }
-    try {
-        resultArray [0]
-    }
-    catch (e: ArrayIndexOutOfBoundsException) {
+    if (resultArray[0] == 0 && resultArray[1] == 0)
         throw IllegalArgumentException("Прокидываем ошибку \"IllegalArgumentException\"")
-    }
+
     return resultArray
 }
 
-// Тут вызов для отладки и проверки
 //fun main(){
-//    val Array2 = intArrayOf(3, 2)
+//    val Array2 = intArrayOf(3, 2, 4)
 //    for (i : Int in sumOfTwo(Array2, 6))
 //        println(i)
 //
