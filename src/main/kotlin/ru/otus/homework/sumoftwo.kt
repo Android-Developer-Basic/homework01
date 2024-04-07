@@ -2,7 +2,7 @@ package ru.otus.homework
 
 
 fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
-    var list = mutableListOf<Int>()
+    val list = mutableListOf<Int>()
     var sum = 0
     //var good = 0
     for (i in 0 until numbers.size) {
