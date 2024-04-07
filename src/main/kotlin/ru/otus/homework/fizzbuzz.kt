@@ -13,19 +13,17 @@ package ru.otus.homework
  */
 
 fun fizzbuzz(n: Int): Array<String> {
-    val FizzbuzzInArray = Array(size = n) {i: Int -> i}
-    var FizzbuzzOutArray = arrayOf<String>()
+    val fizzbuzzinarray = Array(size = n) {i: Int -> i}
+    var fizzbuzzoutarray = arrayOf<String>()
 
-    for (item : Int in FizzbuzzInArray) {
-        if ((item % 3 == 0 && item % 5 == 0 ) || item == 0) {
-            FizzbuzzOutArray += "FizzBuzz"
-        } else if (item % 3 == 0) {
-            FizzbuzzOutArray += "Fizz"
-        } else if (item % 5 == 0) {
-            FizzbuzzOutArray += "Buzz"
-        } else {
-            FizzbuzzOutArray += item.toString()
+    for (item : Int in fizzbuzzinarray) {
+        val value = when {
+            item % 3 == 0 && item % 5 == 0 -> "FizzBuzz"
+            item % 3 == 0 -> "Fizz"
+            item % 5 == 0 -> "Buzz"
+            else -> item.toString()
         }
+        fizzbuzzoutarray +=value
     }
-    return FizzbuzzOutArray
+    return fizzbuzzoutarray
 }

@@ -8,7 +8,7 @@ package ru.otus.homework
 
 fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
 
-    val sumOfTwoOut: ArrayList<Int> = ArrayList<Int>()
+    val sumOfTwoOut: ArrayList<Int> = ArrayList()
 
     for (i in numbers.indices) {
         for (j in i + 1 until numbers.size) {
