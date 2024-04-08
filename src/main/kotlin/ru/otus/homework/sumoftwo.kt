@@ -13,11 +13,12 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
             {
                 list.add(i)
                 list.add(j)
+                break
             }
         }
     }
     if(list.isEmpty())
-        throw IllegalArgumentException("Shit happens")
+        throw IllegalArgumentException("Sorry! There is no such numbers")
 
     return list.toIntArray()
 }
