@@ -12,11 +12,11 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
 
     for (i in numbers.indices) {
         for (j in i + 1 until numbers.size) {
-            println(numbers[i])
-            println(numbers[j])
+
             if (numbers[i] + numbers[j] == target) {
                 sumOfTwoOut.add(i)
                 sumOfTwoOut.add(j)
+                break
             }
         }
     }
