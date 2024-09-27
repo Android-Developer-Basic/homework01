@@ -6,17 +6,13 @@ fun fizzbuzz(n: Int): Array<String> {
         return emptyArray()
     }
 
-    val fizBuzzArr = Array(n){""}
+    return Array(n){
+        val divBy3 = it%3==0
+        val divBy5 = it%5==0
 
-    for (i in  0..<n) {
-        val divBy3 = i%3==0
-        val divBy5 = i%5==0
-
-        fizBuzzArr[i] = if (divBy3 && divBy5) "FizzBuzz"
+        if (divBy3 && divBy5) "FizzBuzz"
         else if (divBy3) "Fizz"
         else if (divBy5) "Buzz"
-        else i.toString()
+        else it.toString()
     }
-
-    return fizBuzzArr
 }
