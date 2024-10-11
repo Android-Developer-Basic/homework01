@@ -6,5 +6,8 @@ fun main() {
 }
 
 fun fizzbuzz(n: Int): Array<String> {
-    TODO("Выполните задание")
+    var i = 0
+    val numbers = Array(n) { i++ }
+    val string = Array<String>(numbers.size) { "" }
+    return string
 }
