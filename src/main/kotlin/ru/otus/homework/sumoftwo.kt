@@ -18,5 +18,10 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
         }
     }
 
-    return numbers
+    if (indexesList.size > 0) {
+        val indexesArray = indexesList.toIntArray()
+        return indexesArray
+    } else {
+        throw IllegalArgumentException("There are no such numbers")
+    }
 }
