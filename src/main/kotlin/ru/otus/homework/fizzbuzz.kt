@@ -8,7 +8,7 @@ fun main() {
 fun fizzbuzz(n: Int): Array<String> {
     var i = 0
     val numbers = Array(n) { i++ }
-    val string = Array<String>(numbers.size) {
+    val strings = Array<String>(numbers.size) {
 
         when {
             it % 3 == 0 && it % 5 == 0->"FizzBuzz"
@@ -19,5 +19,5 @@ fun fizzbuzz(n: Int): Array<String> {
             }
         }
     }
-    return string
+    return strings
 }
