@@ -5,15 +5,18 @@ fun main() {
 }
 
 fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
+    val indexesList = mutableListOf<Int>()
 
     numbers.forEachIndexed { index, valueFirst ->
 
         for (nextIndex in index + 1 until numbers.size) {
 
             if (valueFirst + numbers[nextIndex] == target) {
-                println("get target")
+                indexesList.add(index)
+                indexesList.add(nextIndex)
             }
         }
     }
+
     return numbers
 }
