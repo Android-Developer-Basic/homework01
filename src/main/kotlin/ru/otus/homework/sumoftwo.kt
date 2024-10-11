@@ -5,5 +5,15 @@ fun main() {
 }
 
 fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
-    TODO("Выполните задание")
+
+    numbers.forEachIndexed { index, valueFirst ->
+
+        for (nextIndex in index + 1 until numbers.size) {
+
+            if (valueFirst + numbers[nextIndex] == target) {
+                println("get target")
+            }
+        }
+    }
+    return numbers
 }
