@@ -10,8 +10,9 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
     numbers.forEachIndexed { index, valueFirst ->
 
         for (nextIndex in index + 1 until numbers.size) {
+            val valueNext = numbers[nextIndex]
 
-            if (valueFirst + numbers[nextIndex] == target) {
+            if (valueFirst + valueNext == target) {
                 indexesList.add(index)
                 indexesList.add(nextIndex)
             }
