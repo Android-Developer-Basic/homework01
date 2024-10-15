@@ -15,6 +15,7 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
             }
         }
     }
+    // Если таких чисел нет, то выбросьте исключение IllegalArgumentException
     throw IllegalArgumentException()
 }
 
