@@ -4,20 +4,20 @@ fun fizzbuzz(n: Int): Array<String> {
     // TODO("Выполните задание")
     // Создается массив чисел от 0 размерностью n
     // Заполняем массив значениями от 0 по N
-    val l_IntArray = Array(n) { i -> (i) }
+    val lIntarray = Array(n) { i -> (i) }
     // Создаем выходной массив строк
-    val l_StrArray = Array(n) { i -> (i).toString() }
+    val lStrarray = Array(n) { i -> (i).toString() }
     // Итерируемся по массиву чисел и заполняем выходной массив строк в зависимости от текущего числа:
-    for (i in l_IntArray.indices) {
+    for (i in lIntarray.indices) {
         // Очищаем элемент массива
-        l_StrArray[i] = ""
+        lStrarray[i] = ""
         // Если число кратно трем, то в массив добавляем строку Fizz
-        if (i % 3 == 0) l_StrArray[i] += "Fizz"
+        if (i % 3 == 0) lStrarray[i] += "Fizz"
         // Если число кратно пяти, то в массив добавляем строку Buzz
-        if (i % 5 == 0) l_StrArray[i] += "Buzz"
+        if (i % 5 == 0) lStrarray[i] += "Buzz"
         // Если число не кратно ни одному их этих чисел, то в массив нужно положить просто само число приведенное к строке
-        if ((i % 3 != 0) && (i % 5 != 0)) l_StrArray[i] = i.toString()
+        if ((i % 3 != 0) && (i % 5 != 0)) lStrarray[i] = i.toString()
     }
     // Возвращаем массив строк
-    return l_StrArray
+    return lStrarray
 }

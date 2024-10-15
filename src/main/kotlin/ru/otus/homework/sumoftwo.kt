@@ -5,13 +5,13 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
     // Реализуйте тело функции следующим образом чтобы она возвращала массив целых чисел,
     // состоящий из индексов элементов массива numbers так,
     // чтобы сумма значений чисел находящихся на этих индексах была равна числу target.
-    val l_RetArray = IntArray(2)
+    val lRetarray = IntArray(2)
     for (i in 0 .. numbers.lastIndex) {
         for (j in i+1..numbers.lastIndex) {
             if (numbers[i] + numbers[j] == target) {
-                l_RetArray[0] = i;
-                l_RetArray[1] = j;
-                return l_RetArray
+                lRetarray[0] = i
+                lRetarray[1] = j
+                return lRetarray
             }
         }
     }
