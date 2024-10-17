@@ -1,6 +1,28 @@
 package ru.otus.homework
 
 
+//fun fizzbuzz(n: Int): Array<String> {
+//    TODO("Выполните задание")
+//}
+
 fun fizzbuzz(n: Int): Array<String> {
-    TODO("Выполните задание")
+    var result = emptyArray<String>()
+    for (i in 0..n) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            result += "FizzBuzz"
+        } else if (i % 3 == 0) {
+            result += "Fizz"
+        } else if (i % 5 == 0) {
+            result += "Buzz"
+        } else {
+            result += "$i"
+        }
+    }
+    return result
 }
+
+fun main() {
+    val result = fizzbuzz(5)
+    println(result.contentToString())
+}
+
