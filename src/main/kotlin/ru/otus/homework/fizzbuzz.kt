@@ -1,10 +1,5 @@
 package ru.otus.homework
 
-
-//fun fizzbuzz(n: Int): Array<String> {
-//    TODO("Выполните задание")
-//}
-
 fun fizzbuzz(n: Int): Array<String> {
     var result = emptyArray<String>()
     for (i in 0..n) {
