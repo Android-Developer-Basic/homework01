@@ -2,7 +2,7 @@ package ru.otus.homework
 
 fun fizzbuzz(n: Int): Array<String> {
     var result = emptyArray<String>()
-    for (i in 0..n) {
+    for (i in 0..n-1) {
         if (i % 3 == 0 && i % 5 == 0) {
             result += "FizzBuzz"
         } else if (i % 3 == 0) {
