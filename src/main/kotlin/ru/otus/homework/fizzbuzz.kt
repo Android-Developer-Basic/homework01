@@ -20,4 +20,3 @@ fun main() {
     val result = fizzbuzz(5)
     println(result.contentToString())
 }
-
