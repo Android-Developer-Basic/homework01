@@ -1,10 +1,9 @@
 package ru.otus.homework
 
 fun main(args: Array<String>) {
-    val numbersArray = intArrayOf(10, 7, 11, 15, 2)
+    val numbersArray = intArrayOf(0, 9, 11, 15, 2)
     val target = 9
     println(sumOfTwo(numbersArray, target).contentToString())
-
 }
 
 fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
@@ -20,11 +19,10 @@ fun sumOfTwo(numbers: IntArray, target: Int): IntArray {
                 indexcesArray[0] = index
                 indexcesArray[1] = nextIndex
             }
-
         }
-
     }
-    if (indexcesArray[0] != 0 && indexcesArray[1] != 0) return indexcesArray else throw IllegalArgumentException("not values")
 
-
+    if (indexcesArray[0] != 0 || indexcesArray[1] != 0)
+        return indexcesArray
+    else throw IllegalArgumentException("not values")
 }
