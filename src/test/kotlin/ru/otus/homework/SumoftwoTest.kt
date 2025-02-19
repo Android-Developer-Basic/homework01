@@ -26,4 +26,32 @@ class SumoftwoTest {
             sumOfTwo(intArrayOf(3, 2), 6)
         }
     }
+
+    @Test
+    fun testcaseWithZero() {
+        val actual = sumOfTwo(intArrayOf(3, 2, 0 ,0 , 4), 6)
+        val expected = intArrayOf(1, 2,3,4)
+        assertArrayEquals(expected, actual)
+    }
+
+    @Test
+    fun testcaseWithMinus() {
+        val actual = sumOfTwo(intArrayOf(2, -7, 11, 15), 8)
+        val expected = intArrayOf(1, 3)
+        assertArrayEquals(expected, actual)
+    }
+
+    @Test
+    fun testcaseWithSumZeroMinus() {
+        val actual = sumOfTwo(intArrayOf(2, -7, 11, 7), 0)
+        val expected = intArrayOf(1, 3)
+        assertArrayEquals(expected, actual)
+    }
+
+    @Test
+    fun testcaseWithSumZero() {
+        val actual = sumOfTwo(intArrayOf(2, 0, 11, 7), 0)
+        val expected = intArrayOf(1)
+        assertArrayEquals(expected, actual)
+    }
 }
