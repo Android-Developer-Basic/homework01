@@ -10,7 +10,7 @@ fun fizzbuzz(n: Int): Array<String> {
 
     val resArray: Array<String> = Array<String>(size = n){""}
 
-    for(i in 0..<n){
+    for(i in tempArray){
         resArray[i] = when{
             (i % 15 == 0) -> "FizzBuzz"
             (i % 3 == 0) -> "Fizz"
